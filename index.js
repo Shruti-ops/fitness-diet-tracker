@@ -7,6 +7,8 @@ const session = require('express-session');
 
 app.use(express.static('public'));  // Serve static files (CSS, JS, etc.) from 'public' folder
 
+app.use(express.static(path.join(__dirname, 'public')));
+
 // Middleware to parse URL-encoded data (from HTML forms)
 app.use(express.urlencoded({ extended: true }));
 
