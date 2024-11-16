@@ -30,9 +30,11 @@ app.get('/analytics', (req, res) => {
 
 
 // Health check route
+// Redirect root URL to login.html or home.html
 app.get('/', (req, res) => {
-  res.send('Server is up and running!');
+  res.sendFile(__dirname + '/public/register.html'); // Change to 'home.html' if you prefer
 });
+
 
 // Serve the register.html page when user accesses /register
 app.get('/register', (req, res) => {
